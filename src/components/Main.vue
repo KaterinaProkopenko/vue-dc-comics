@@ -54,6 +54,10 @@ export default {
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+    div.dc-main{
+        font-family: Roboto Condensed;
+    }
+
     section.dc-main-top{
         width: 100vw;
         height: 15vh;
@@ -100,7 +104,7 @@ export default {
 
     h5{
         font-weight: 300;
-        font-size: .7rem;
+        font-size: .8rem;
         text-transform: uppercase;
         color: white;
     }

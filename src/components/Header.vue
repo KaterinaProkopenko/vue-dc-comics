@@ -88,7 +88,8 @@ export default {
   a{
     text-decoration: none;
     color: #384033;
-    font-size: .9rem;
+    font-size: .8rem;
+    text-transform: uppercase;
   }
 
   .active{
