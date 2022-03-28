@@ -1,12 +1,12 @@
 <template>
-  <div class="hello">
-    
+  <div class="dc-footer">
+    <h1>Footer</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'IndexFooter',
 }
 </script>
 
