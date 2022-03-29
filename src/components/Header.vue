@@ -81,7 +81,7 @@ export default {
 
   div.dc-header{
     width: 100vw;
-    height: 15vh;
+    height: 110px;
     font-weight: 700;
 
     img{
@@ -93,7 +93,7 @@ export default {
       display: flex;
       justify-content: space-between;
       width: 70%;
-      height: 15vh;
+      height: 100%;
       margin: 0;
 
       li{

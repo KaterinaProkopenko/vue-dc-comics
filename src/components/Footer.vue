@@ -184,7 +184,7 @@ export default {
         section.footer-top{
             width: 100vw;
             min-width: 900px;
-            height: 39vh;
+            height: 280px;
             background-image: url(../assets/img/footer-bg.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -203,8 +203,9 @@ export default {
                 width: 450px;
                 height: 100%;
                 background-image: url(../assets/img/dc-logo-bg.png);
-                background-size: 100%;
-                background-position-y: center;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
             }
 
             a{
@@ -215,7 +216,7 @@ export default {
 
         section.footer-bottom{
             width: 100%;
-            height: 14vh;
+            height: 100px;
             background-color: #303030;
             text-transform: uppercase;
 
