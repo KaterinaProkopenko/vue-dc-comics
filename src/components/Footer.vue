@@ -6,94 +6,31 @@
                   <div>
                       <h4>dc comics</h4>
                       <ul>
-                          <li>
-                              <a href="#">Characters</a>
-                          </li>
-                          <li>
-                              <a href="#">Comics</a>
-                          </li>
-                          <li>
-                              <a href="#">Movies</a>
-                          </li>
-                          <li>
-                              <a href="#">TV</a>
-                          </li>
-                          <li>
-                              <a href="#">Games</a>
-                          </li>
-                          <li>
-                              <a href="#">Videos</a>
-                          </li>
-                          <li>
-                              <a href="#">News</a>
+                          <li v-for="(element, index) in comics" :key="index">
+                              <a :href="element.url">{{element.text}}</a>
                           </li>
                       </ul>
 
                       <h4>shop</h4>
                       <ul>
-                          <li>
-                              <a href="#">Shop DC</a>
-                          </li>
-                          <li>
-                              <a href="#">Shop DC Collectibles</a>
+                          <li v-for="(element, index) in shop" :key="index">
+                              <a :href="element.url">{{element.text}}</a>
                           </li>
                       </ul>
                   </div>
                   <div class="footer-list-middle">
                       <h4>dc</h4>
                       <ul>
-                          <li>
-                              <a href="#">Terms Of Use</a>
-                          </li>
-                          <li>
-                              <a href="#">Privacy policy (New)</a>
-                          </li>
-                          <li>
-                              <a href="#">Ad Choices</a>
-                          </li>
-                          <li>
-                              <a href="#">Advertising</a>
-                          </li>
-                          <li>
-                              <a href="#">Jobs</a>
-                          </li>
-                          <li>
-                              <a href="#">Subscriptions</a>
-                          </li>
-                          <li>
-                              <a href="#">Talent Workshops</a>
-                          </li>
-                          <li>
-                              <a href="#">CPSC Certificates</a>
-                          </li>
-                          <li>
-                              <a href="#">Ratings</a>
-                          </li>
-                          <li>
-                              <a href="#">Shop Help</a>
-                          </li>
-                          <li>
-                              <a href="#">Contact Us</a>
+                          <li v-for="(element, index) in dc" :key="index">
+                              <a :href="element.url">{{element.text}}</a>
                           </li>
                       </ul>
                   </div>
                   <div>
                       <h4>sites</h4>
                       <ul>
-                          <li>
-                              <a href="#">DC</a>
-                          </li>
-                          <li>
-                              <a href="#">MAD Magazine</a>
-                          </li>
-                          <li>
-                              <a href="#">DC Kids</a>
-                          </li>
-                          <li>
-                              <a href="#">DC Universe</a>
-                          </li>
-                          <li>
-                              <a href="#">DC Power Visa</a>
+                          <li v-for="(element, index) in sites" :key="index">
+                              <a :href="element.url">{{element.text}}</a>
                           </li>
                       </ul>
                   </div>
@@ -120,65 +57,197 @@
 <script>
 export default {
   name: 'IndexFooter',
+  data: function() {
+      return {
+          comics: [
+              {
+                  url: '#',
+                  text: 'Characters'
+              },
+              {
+                  url: '#',
+                  text: 'Comics'
+              },
+              {
+                  url: '#',
+                  text: 'Movies'
+              },
+              {
+                  url: '#',
+                  text: 'TV'
+              },
+              {
+                  url: '#',
+                  text: 'Games'
+              },
+              {
+                  url: '#',
+                  text: 'Videos'
+              },
+              {
+                  url: '#',
+                  text: 'News'
+              }
+          ],
+          shop: [
+              {
+                  url: '#',
+                  text: 'Shop DC'
+              },
+              {
+                  url: '#',
+                  text: 'Shop DC Collectibles'
+              }
+          ],
+          dc: [
+              {
+                  url: '#',
+                  text: 'Terms Of Use'
+              },
+              {
+                  url: '#',
+                  text: 'Privacy policy (New)'
+              },
+              {
+                  url: '#',
+                  text: 'Ad Choices'
+              },
+              {
+                  url: '#',
+                  text: 'Advertising'
+              },
+              {
+                  url: '#',
+                  text: 'Jobs'
+              },
+              {
+                  url: '#',
+                  text: 'Subscriptions'
+              },
+              {
+                  url: '#',
+                  text: 'Talent Workshops'
+              },
+              {
+                  url: '#',
+                  text: 'CPSC Certificates'
+              },
+              {
+                  url: '#',
+                  text: 'Ratings'
+              },
+              {
+                  url: '#',
+                  text: 'Shop Help'
+              },
+              {
+                  url: '#',
+                  text: 'Contact Us'
+              }
+          ],
+          sites: [
+              {
+                  url: '#',
+                  text: 'DC'
+              },
+              {
+                  url: '#',
+                  text: 'MAD Magazine'
+              },
+              {
+                  url: '#',
+                  text: 'DC Kids'
+              },
+              {
+                  url: '#',
+                  text: 'DC Universe'
+              },
+              {
+                  url: '#',
+                  text: 'DC Power Visa'
+              }
+          ]
+      }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import "../assets/scss/variables.scss";
 
     div.dc-footer{
         width: 100vw;
         height: 53vh;
-        font-family: Roboto Condensed;
+
+        section.footer-top{
+            width: 100vw;
+            min-width: 900px;
+            height: 39vh;
+            background-image: url(../assets/img/footer-bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            div.footer-list{
+                margin-top: 1.2rem;
+                display: flex;
+            }
+
+            div.footer-list-middle{
+                margin: 0 1.5rem;
+            }
+
+            div.logo-bg{
+                width: 450px;
+                height: 100%;
+                background-image: url(../assets/img/dc-logo-bg.png);
+                background-size: 100%;
+                background-position-y: center;
+            }
+
+            a{
+                color: gray;
+                font-size: .7rem;
+            }
+        }
+
+        section.footer-bottom{
+            width: 100%;
+            height: 14vh;
+            background-color: #303030;
+            text-transform: uppercase;
+
+            a{
+                color: $colorWhite;
+                border: 2px solid $brandPrimary;
+                padding: .6rem;
+            }
+
+            
+
+            div.social-media{
+                display: flex;
+                align-items: center;
+
+                h3{
+                    color: $brandPrimary;
+                    padding-right: .5rem;
+                }
+                
+                img{
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 1rem;
+                }
+            }
+        }
     }
 
-    section.footer-top{
-        width: 100vw;
-        min-width: 900px;
-        height: 39vh;
-        background-image: url(../assets/img/footer-bg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-    section.footer-bottom{
-        width: 100%;
-        height: 14vh;
-        background-color: #303030;
+    h4{
         text-transform: uppercase;
-    }
-
-    div.container{
-        width: 1000px;
-        height: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    div.footer-list{
-        margin-top: 1.2rem;
-        display: flex;
-    }
-
-    div.footer-list-middle{
-        margin: 0 1.5rem;
-    }
-
-    div.logo-bg{
-        width: 450px;
-        height: 100%;
-        background-image: url(../assets/img/dc-logo-bg.png);
-        background-size: 100%;
-        background-position-y: center;
-    }
-
-    section.footer-top h4{
-        text-transform: uppercase;
-        color: white;
+        color: $colorWhite;
         margin: 0;
         padding: .7rem 0;
     }
@@ -187,40 +256,10 @@ export default {
         padding-left: 0;
         padding-bottom: .3rem;
         margin: 0;
+
+        li{
+            line-height: .9rem;
+        }
     }
 
-    li{
-        list-style-type: none;
-        line-height: .9rem;
-    }
-
-    section.footer-top a{
-        text-decoration: none;
-        color: gray;
-        font-size: .7rem;
-    }
-
-    section.footer-bottom a{
-        text-decoration: none;
-        color: white;
-        border: 2px solid #0282F9;
-        padding: .6rem;
-    }
-
-    section.footer-bottom h3{
-        color: #0282F9;
-        padding-right: .5rem;
-    }
-
-    div.social-media{
-        display: flex;
-        align-items: center;
-
-    }
-
-    div.social-media img{
-        width: 30px;
-        height: 30px;
-        margin-left: 1rem;
-    }
 </style>
